@@ -11,7 +11,8 @@ const PORT = process.env.PORT || 5000
 const server = new ApolloServer({
     cors: {
         origin: '*',
-        credentials: true
+        credentials: true,
+        methods: ["OPTIONS", "GET", "POST"],
     },
     typeDefs,
     resolvers
